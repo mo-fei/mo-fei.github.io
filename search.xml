@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
+    <title></title>
+    <url>%2F2019%2F07%2F20%2Ftest%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[搭gitalk所遇到很难发现的坑]]></title>
+    <url>%2F2019%2F07%2F20%2F%E6%90%ADgitalk%E6%89%80%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91%2F</url>
+    <content type="text"><![CDATA[很多人在使用 github pages 时使用 gitalk 1. Item 1 1. Item 2 1. Item 3 2. 1. Item 3a 2. 1. Item 3b Item 1 Item 2 Item 2a Item 2b 图片 Format: 内联代码 As Kanye West said: We’re living the future sothe present is our past.]]></content>
+      <tags>
+        <tag>gitalk</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World之markdown语法练习]]></title>
     <url>%2F2019%2F07%2F18%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[markdown语法链接 很多人在使用 github pages 时使用 gitalk 1. Item 1 1. Item 2 1. Item 3 2. 1. Item 3a 2. 1. Item 3b Item 1 Item 2 Item 2a Item 2b 图片 Format: 内联代码 As Kanye West said: We’re living the future sothe present is our past.Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment 很多人在使用 github pages 时使用 gitalk 1. Item 1 1. Item 2 1. Item 3 2. 1. Item 3a 2. 1. Item 3b Item 1 Item 2 Item 2a Item 2b 图片 Format: 内联代码 As Kanye West said: We’re living the future sothe present is our past.]]></content>
   </entry>
 </search>

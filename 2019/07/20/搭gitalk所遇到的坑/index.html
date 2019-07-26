@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    归档: 2019 |
+    搭gitalk所遇到很难发现的坑 |
     
     莫非工作室</title>
   
@@ -27,94 +27,148 @@
 <body>
 <main class="content">
   <section class="outer">
-  <article class="articles">
+  <article id="post-搭gitalk所遇到的坑" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
     
-    <h1 class="page-type-title">2019</h1>
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      搭gitalk所遇到很难发现的坑
+    </h1>
+  
+  
+
+
+
+
+      </header>
+    
 
     
-    
-    
-      
-      
-        
-        
-    <div class="archives-wrap">
-      <div class="archive-year-wrap">
-        <a href="/archives/2019" class="archive-year">2019</a>
-      </div>
-      <div class="archives">
-        
-        <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/07/20/test/" class="archive-article-date">
-  <time datetime="2019-07-20T02:54:39.540Z" itemprop="datePublished">07/20</time>
+      <div class="article-meta">
+        <a href="/2019/07/20/搭gitalk所遇到的坑/" class="article-date">
+  <time datetime="2019-07-20T02:41:51.000Z" itemprop="datePublished">2019-07-20</time>
 </a>
-      
-
-    </header>
-    
-    
-  </div>
-</article>
-        
-      
-      
-        <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/07/20/搭gitalk所遇到的坑/" class="archive-article-date">
-  <time datetime="2019-07-20T02:41:51.000Z" itemprop="datePublished">07/20</time>
-</a>
-      
-  
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/20/搭gitalk所遇到的坑/">搭gitalk所遇到很难发现的坑</a>
-    </h2>
-  
-  
-
-
-
-
-    </header>
-    
-    
-  </div>
-</article>
-        
-      
-      
-        <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/07/18/hello-world/" class="archive-article-date">
-  <time datetime="2019-07-18T01:55:03.150Z" itemprop="datePublished">07/18</time>
-</a>
-      
-  
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/18/hello-world/">Hello World之markdown语法练习</a>
-    </h2>
-  
-  
-
-
-
-
-    </header>
-    
-    
-  </div>
-</article>
-        
         
       </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+
+      
+        <p>很多人在使用 <strong>github pages</strong> 时使用 <a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener"><em>gitalk</em></a></p>
+<pre><code>1. Item 1 
+1. Item 2
+1. Item 3
+2. 
+   1. Item 3a
+   2. 
+   1. Item 3b</code></pre><ul>
+<li>Item 1</li>
+<li>Item 2<ul>
+<li>Item 2a</li>
+<li>Item 2b</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>图片</strong></p>
+<p><img src="/images/logo.png" alt="GitHub Logo"><br>Format: <img src="url" alt="Alt Text"></p>
+<hr>
+<p><strong>内联代码</strong></p>
+<p>As Kanye West said:</p>
+<blockquote>
+<p>We’re living the future so<br>the present is our past.</p>
+</blockquote>
+
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="https://mofeiboy.github.io/2019/07/20/搭gitalk所遇到的坑/" data-id="cjyaxgbdn0000yck5ouqx9aw6"
+         class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitalk/">gitalk</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
     
+  <nav class="article-nav">
+    
+      <a href="/2019/07/20/test/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            (no title)
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2019/07/18/hello-world/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">Hello World之markdown语法练习</div>
+      </a>
+    
+  </nav>
+
+
   
 
   
+    
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+	
+	  clientID: '49601431554f3b2aab62',
+	  clientSecret: '6dc8a9e7900f668d24dd601b57b04e32f5cc02d6',
+	  repo: 'gitalkRepo',
+	  owner: 'mofeiboy',
+	  admin: ['mofeiboy'],
+	  id: location.pathname,      // Ensure uniqueness and length less than 50
+	  distractionFreeMode: false
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+      //clientID: '49601431554f3b2aab62',
+      //clientSecret: '6dc8a9e7900f668d24dd601b57b04e32f5cc02d6',
+      //repo: 'gitalkRepo',
+      //owner: 'mofeiboy',
+      //admin: ['mofeiboy'],
+      //id: location.pathname,      // Ensure uniqueness and length less than 50
+      //id: md5(location.pathname),
+      //distractionFreeMode: false
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+  
+
+</article>
+
+
+
 </section>
   <footer class="footer">
   <div class="outer">
