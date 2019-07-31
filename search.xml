@@ -6,11 +6,6 @@
     <content type="text"><![CDATA[莫非 1.cpu：负责给手机其他部件发指令的,它是手机的控制中心。 2.暂存：（RAM）随机存储器,在手机关闭电源后其内部信息将会丢失,再次开机时重新装入。通常用于存放手机各种运行的软件、输入和输出数据。 3.硬盘/字库：（ROM）静态空间，用来存储和保存永久数据的，手机关闭电源后其内部信息仍被保存，一般用于存放固定的手机系统、软件和字库。字库相当于电脑的BIOS。 4.电源芯片：主要将手机电池电压转化为手机正常工作时所需要的各种状态下的工作电压，并根据手机工作需要调节至合适的电压。 5.基带芯片：又称基带CPU，负责合成即将发送的基带信号，或对接收到的基带信号进行解码。 6.射频芯片：简称RF，指将无线电信号通信转换成一定频段的无线电信号的一个电子元器件。在手机中主要负责信号的接收、发送、频率合成等。 7.功放芯片（射频功率放大器）：简称RFPA，对射频功率进行放大。 8.天线开关：切换天线工作状态的开关，手机信号的接收和发射都是从天线一条线进出，在发射信号的时候打开让信号发射出去，接收信号的时候打开将信号接收进来，开关的切换受基带CPU控制。 9.WI-FI芯片（集成了蓝牙）：是无线保真的缩写，俗称无线宽带。负责接收、发送手机wifi信息的芯片。 10.NFC芯片：近场通讯，近距离无线通信。 11.指南针芯片：实时提供手机转动的方向。 12.陀螺仪：用于感应手机水平方位。 13.气压传感器：感应气压的强弱 指南针、陀螺仪、气压传感器三个使用同一总线传输数据，任一损坏之后相互干扰，甚至都不能用]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2019%2F07%2F20%2Ftest%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[Hello World之markdown语法练习]]></title>
     <url>%2F2019%2F07%2F18%2Fhello-world%2F</url>
     <content type="text"><![CDATA[markdown语法链接 很多人在使用 github pages 时使用 gitalk 1. Item 1 1. Item 2 1. Item 3 2. 1. Item 3a 2. 1. Item 3b Item 1 Item 2 Item 2a Item 2b 图片 Format: 内联代码 As Kanye West said: We’re living the future sothe present is our past.Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment 很多人在使用 github pages 时使用 gitalk 1. Item 1 1. Item 2 1. Item 3 2. 1. Item 3a 2. 1. Item 3b Item 1 Item 2 Item 2a Item 2b 图片 Format: 内联代码 As Kanye West said: We’re living the future sothe present is our past.]]></content>
