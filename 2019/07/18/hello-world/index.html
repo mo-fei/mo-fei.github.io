@@ -124,9 +124,51 @@
 </blockquote>
 
       
+	  
+		
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+	
+	  clientID: '49601431554f3b2aab62',
+	  clientSecret: '6dc8a9e7900f668d24dd601b57b04e32f5cc02d6',
+	  repo: 'gitalkRepo',
+	  owner: 'mofeiboy',
+	  admin: ['mofeiboy'],
+	  id: location.pathname,      // Ensure uniqueness and length less than 50
+	  distractionFreeMode: false
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+      //clientID: '49601431554f3b2aab62',
+      //clientSecret: '6dc8a9e7900f668d24dd601b57b04e32f5cc02d6',
+      //repo: 'gitalkRepo',
+      //owner: 'mofeiboy',
+      //admin: ['mofeiboy'],
+      //id: location.pathname,      // Ensure uniqueness and length less than 50
+      //id: md5(location.pathname),
+      //distractionFreeMode: false
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+	  
     </div>
     <footer class="article-footer">
-      <a data-url="https://mofeiboy.github.io/2019/07/18/hello-world/" data-id="cjyrdzhmi00001ok5by3u5oxh"
+      <a data-url="https://mofeiboy.github.io/2019/07/18/hello-world/" data-id="cjyrf4flg0000q0k5t4z9trav"
          class="article-share-link">分享</a>
       
     </footer>
