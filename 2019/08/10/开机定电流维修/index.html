@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    不触发开机维修 |
+    开机定电流维修思路 |
     
     刻舟求剑</title>
   
@@ -27,7 +27,7 @@
 <body>
 <main class="content">
   <section class="outer">
-  <article id="post-不触发开机维修" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-开机定电流维修" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
     
@@ -35,7 +35,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      不触发开机维修
+      开机定电流维修思路
     </h1>
   
   
@@ -48,8 +48,8 @@
 
     
       <div class="article-meta">
-        <a href="/2019/08/09/不触发开机维修/" class="article-date">
-  <time datetime="2019-08-09T01:36:09.040Z" itemprop="datePublished">2019-08-09</time>
+        <a href="/2019/08/10/开机定电流维修/" class="article-date">
+  <time datetime="2019-08-09T16:34:18.630Z" itemprop="datePublished">2019-08-10</time>
 </a>
         
       </div>
@@ -62,30 +62,19 @@
 
       
         <p><a href="https://www.chinafix.com/space-uid-1203975.html" target="_blank" rel="noopener">莫非</a></p>
-<p><strong><em>触不触发： 看电流跳变，有电流跳变—-&gt;触发；无电流跳变—-&gt;不触发。</em></strong></p>
-<pre><code>开机条件：
-
-1.供电:主电源输出供电给cpu、暂存、硬盘、其他设备。
-
-2.时钟供电：24MHz主时钟（导致不显示，定电流30mA左右），32.768KHz休眠时钟（不参与开机）
-
-3.复位：主电源输出1.8v复位信号RESER_L给CPU电路。        
-4.系统：软件系统（开机程序、系统程序）、 硬件系统（CPU、暂存、硬盘）。
-
-5.维持：开机程序正常运行后，由CPU向电源发出的继续输出各路供电的指令，
-        6、6p=====HOLD    6S后=====WDOG_RESET(保持正常工作)。</code></pre><p><strong>开机原理</strong></p>
-<p>1.接电后输出电池供电PP_BATT_MAIN给充电管Q2300供电。</p>
-<p>2.充电管工作将电池电压转换为主供电 PP_VCC_MAIN，其中一路送到主电源供电。</p>
-<p>3.主电源给Y2200晶振供电，晶振工作输出32.768KHz休眠时钟信号给主供电。</p>
-<p>4.主供电内部稳压器输出1.8V待机供电PP1V8_ALWAYS,一路给A9CPU供电，另一路给开机键提供上拉。</p>
-<p>5.按开机键产生开机信号BOTTON_HOLD_KEY同时给CPU和主电源</p>
-<p>6.电源得到开机信号后，内部降压电源工作，分别输出给CPU、暂存、硬盘等。</p>
-<p>7.CPU给Y0600晶振供电，晶振产生24MHz频率给CPU内部时钟模块，时钟模块工作。</p>
-<p>8.CPU时钟电路工作后，输出一个测试时钟信号给电源</p>
-<p>9.电源延时输出1.8V复位信号PMU_TO_SYSTEM_COLD_RESET_L,其中一路复位CPU</p>
-<p>10.CPU开始工作，通过PCIE总线读取硬盘内部开机程序，并按开机程序执行相关检测工作(读取不到开机程序—&gt;手机进入DFU模式)</p>
-<p>11.自检正常通过I2C0总线与电源通信，电源输出GPU供电（已经显示LOGO）（自检中，如果设备检测正常，就会进入下一步；如果不正常，停止检测–&gt;定电流、重复检测，掉电重启）</p>
-<p>12.自检正常后，CPU输出维持信号AP_TO_PMU_WDOG_RESET给主电源（通知电源保持所有供电正常输出，不要掉电</p>
+<p>30-80-120-180-220<br>开机（触发）大电流：开机电流瞬间过大</p>
+<p>导致触发大电流原因：<br>主电源输出的供电存在短路，导致电流开机电流输出供电电流瞬间变大。</p>
+<p>触发大电流维修思路：<br>断电参考点位图、标注图一一测量主电源输出的每一个供电，当测试到那个对地值为0或者偏小，表示此路供电存在问题–》先拆电容–相连芯片—主电源</p>
+<p>万用表二极管档打值<br>按开机键一下从200mA起跳—-》电源输出的3v供电有问题，指南针供电、感光感距供电、USB管理供电—》耗电快</p>
+<p>开机（触发）小电流：板上某些工作条件不正常导致，具体维修方向如下：</p>
+<pre><code>15mA左右--》CPU缺少供电，主要查SOC供电、CPU供电、CPU空焊、供电电感空焊.
+20-30mA左右抖动---》CPU的时钟（32.768K）问题
+40mA左右定住---》CPU复位问题。
+50mA左右定住----》I2C0、I2C1总线上拉电阻虚焊或者总线短路。
+80mA左右定住---》上层空焊、USB管理IC、背光供电IC、显示供电IC.先测量I2C0总线电压，可能是电压低导致
+80-90mA左右---》恢复模式，DFU模式。进电脑用爱思看
+100mA---120mA左右摆动---》上层空焊、上坏。</code></pre><p>不显示的主板进DFU模式刷机，显示的进恢复模式刷机</p>
+<p><img src="/images/%E5%BC%80%E6%9C%BA%E5%AE%9A%E7%94%B5%E6%B5%81%E7%BB%B4%E4%BF%AE.jpg" alt="你好卡啊"></p>
 
       
 	  
@@ -132,7 +121,7 @@
 	  
     </div>
     <footer class="article-footer">
-      <a data-url="https://mofeiboy.github.io/2019/08/09/不触发开机维修/" data-id="cjz3g2xh60000rok5w6ef39k1"
+      <a data-url="https://mofeiboy.github.io/2019/08/10/开机定电流维修/" data-id="cjz4cfok50000iwk59g8llwdb"
          class="article-share-link">分享</a>
       
     </footer>
@@ -143,19 +132,10 @@
     
   <nav class="article-nav">
     
-      <a href="/2019/08/10/开机定电流维修/" class="article-nav-link">
-        <strong class="article-nav-caption">前一篇</strong>
-        <div class="article-nav-title">
-          
-            开机定电流维修思路
-          
-        </div>
-      </a>
     
-    
-      <a href="/2019/08/01/0801作业/" class="article-nav-link">
+      <a href="/2019/08/09/不触发开机维修/" class="article-nav-link">
         <strong class="article-nav-caption">后一篇</strong>
-        <div class="article-nav-title">万用表的使用作业</div>
+        <div class="article-nav-title">不触发开机维修</div>
       </a>
     
   </nav>
