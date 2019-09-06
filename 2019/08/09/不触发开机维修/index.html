@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="且随疾风">
 <meta property="og:description" content="莫非 触不触发： 看电流跳变，有电流跳变—-&amp;gt;触发；无电流跳变—-&amp;gt;不触发。 开机条件：  1.供电:主电源输出供电给cpu、暂存、硬盘、其他设备。  2.时钟供电：24MHz主时钟（导致不显示，定电流30mA左右），32.768KHz休眠时钟（不参与开机）  3.复位：主电源输出1.8v复位信号RESER_L给CPU电路。         4.系统：软件系统（开机程序、系统程序）、">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-21T14:21:40.000Z">
+<meta property="og:updated_time" content="2019-09-06T02:12:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="不触发开机维修">
 <meta name="twitter:description" content="莫非 触不触发： 看电流跳变，有电流跳变—-&amp;gt;触发；无电流跳变—-&amp;gt;不触发。 开机条件：  1.供电:主电源输出供电给cpu、暂存、硬盘、其他设备。  2.时钟供电：24MHz主时钟（导致不显示，定电流30mA左右），32.768KHz休眠时钟（不参与开机）  3.复位：主电源输出1.8v复位信号RESER_L给CPU电路。         4.系统：软件系统（开机程序、系统程序）、">
@@ -186,7 +186,6 @@
 <p>10.CPU开始工作，通过PCIE总线读取硬盘内部开机程序，并按开机程序执行相关检测工作(读取不到开机程序—&gt;手机进入DFU模式)</p>
 <p>11.自检正常通过I2C0总线与电源通信，电源输出GPU供电（已经显示LOGO）（自检中，如果设备检测正常，就会进入下一步；如果不正常，停止检测–&gt;定电流、重复检测，掉电重启）</p>
 <p>12.自检正常后，CPU输出维持信号AP_TO_PMU_WDOG_RESET给主电源（通知电源保持所有供电正常输出，不要掉电</p>
-<p><a href="https://shop135943924.taobao.com" target="_blank" rel="noopener">莫非服饰店</a></p>
 
         </div>
         <div class="post-reply">
